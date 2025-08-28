@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpeedLive - Recommended Tech Stack</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 210mm;
+        margin: 0 auto;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .header p {
+        font-size: 1.2em;
+        opacity: 0.9;
+      }
+
+      .content {
+        padding: 30px;
+      }
+
+      .section {
+        margin-bottom: 30px;
+        page-break-inside: avoid;
+      }
+
+      .section-title {
+        font-size: 1.5em;
+        color: #2c3e50;
+        border-bottom: 3px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .tech-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      .tech-category {
+        background: #f8f9fa;
+        border-radius: 8px;
+        padding: 20px;
+        border-left: 5px solid #3498db;
+      }
+
+      .tech-category h3 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-size: 1.2em;
+      }
+
+      .tech-list {
+        list-style: none;
+      }
+
+      .tech-list li {
+        margin-bottom: 8px;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .tech-list li:before {
+        content: "→";
+        color: #3498db;
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+      }
+
+      .recommended {
+        background: #e8f5e8;
+        border-left-color: #27ae60;
+        position: relative;
+      }
+
+      .recommended:after {
+        content: "RECOMMENDED";
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #27ae60;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-size: 0.8em;
+        font-weight: bold;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 0.9em;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .comparison-table th {
+        background: #3498db;
+        color: white;
+        font-weight: 600;
+      }
+
+      .comparison-table tr:nth-child(even) {
+        background: #f2f2f2;
+      }
+
+      .highlight {
+        background: #fff3cd !important;
+        font-weight: bold;
+      }
+
+      .architecture-flow {
+        background: #f8f9fa;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 0;
+        font-family: monospace;
+        font-size: 0.9em;
+        border: 1px solid #ddd;
+      }
+
+      .benefits {
+        background: #e8f5e8;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 0;
+      }
+
+      .benefits ul {
+        margin-left: 20px;
+      }
+
+      .benefits li {
+        margin-bottom: 10px;
+      }
+
+      .footer {
+        background: #34495e;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .download-btn {
+        background: #3498db;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1em;
+        cursor: pointer;
+        margin: 20px 0;
+        transition: background 0.3s;
+      }
+
+      .download-btn:hover {
+        background: #2980b9;
+      }
+
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+        .container {
+          box-shadow: none;
+          border-radius: 0;
+          max-width: none;
+        }
+        .download-btn {
+          display: none;
+        }
+      }
+
+      .project-info {
+        background: #e3f2fd;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 30px;
+        border-left: 5px solid #2196f3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>SpeedLive</h1>
+        <p>Multi-Tenant SaaS Shipping Management Platform</p>
+        <p style="font-size: 1em; margin-top: 10px">
+          Recommended Technology Stack
+        </p>
+      </div>
+
+      <div class="content">
+        <div class="project-info">
+          <h3 style="color: #1976d2; margin-bottom: 15px">Project Overview</h3>
+          <p>
+            <strong>Platform:</strong> Multi-tenant SaaS shipping management
+            system
+          </p>
+          <p>
+            <strong>Goal:</strong> Support multiple client platforms with shared
+            core software
+          </p>
+          <p>
+            <strong>Key Features:</strong> Parcel lifecycle management, delivery
+            tracking, automated billing, multi-role access
+          </p>
+        </div>
+
+        <button class="download-btn" onclick="window.print()">
+          📄 Download as PDF
+        </button>
+
+        <div class="section">
+          <h2 class="section-title">🏗️ Recommended Technology Stack</h2>
+
+          <div class="tech-grid">
+            <div class="tech-category recommended">
+              <h3>Backend Framework</h3>
+              <ul class="tech-list">
+                <li><strong>NestJS</strong> (Primary Choice)</li>
+                <li>Node.js + TypeScript</li>
+                <li>Prisma ORM</li>
+                <li>class-validator + class-transformer</li>
+                <li>Passport.js Authentication</li>
+                <li>Socket.io for WebSocket</li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h3>Frontend Stack</h3>
+              <ul class="tech-list">
+                <li>Next.js 14+ (App Router)</li>
+                <li>React + TypeScript</li>
+                <li>Tailwind CSS + shadcn/ui</li>
+                <li>TanStack Query + Zustand</li>
+                <li>React Hook Form + Zod</li>
+                <li>Recharts for Analytics</li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h3>Database & Storage</h3>
+              <ul class="tech-list">
+                <li>PostgreSQL 15+ (Primary DB)</li>
+                <li>Redis 7+ (Cache & Sessions)</li>
+                <li>AWS S3 / Google Cloud Storage</li>
+                <li>PostgreSQL Full Text Search</li>
+                <li>Row Level Security (RLS)</li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h3>Infrastructure & DevOps</h3>
+              <ul class="tech-list">
+                <li>Docker + Docker Compose</li>
+                <li>AWS / Google Cloud Platform</li>
+                <li>GitHub Actions / GitLab CI</li>
+                <li>Sentry (Monitoring)</li>
+                <li>SendGrid + AWS SNS</li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h3>Development Tools</h3>
+              <ul class="tech-list">
+                <li>pnpm (Package Manager)</li>
+                <li>ESLint + Prettier + Husky</li>
+                <li>Jest + Supertest + Cypress</li>
+                <li>Swagger/OpenAPI Docs</li>
+                <li>Bull/BullMQ (Background Jobs)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">🏆 Backend Framework Comparison</h2>
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th class="highlight">NestJS</th>
+                <th>Fastify</th>
+                <th>Express.js</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Performance</td>
+                <td class="highlight">Good (Express/Fastify under hood)</td>
+                <td>Excellent</td>
+                <td>Good</td>
+              </tr>
+              <tr>
+                <td>TypeScript Support</td>
+                <td class="highlight">First-class</td>
+                <td>Good</td>
+                <td>Requires setup</td>
+              </tr>
+              <tr>
+                <td>Architecture</td>
+                <td class="highlight">Enterprise/Scalable</td>
+                <td>Minimal</td>
+                <td>Flexible</td>
+              </tr>
+              <tr>
+                <td>Multi-tenancy</td>
+                <td class="highlight">Built-in patterns</td>
+                <td>Manual setup</td>
+                <td>Manual setup</td>
+              </tr>
+              <tr>
+                <td>Validation</td>
+                <td class="highlight">Built-in decorators</td>
+                <td>Manual</td>
+                <td>Manual</td>
+              </tr>
+              <tr>
+                <td>Testing</td>
+                <td class="highlight">Excellent tooling</td>
+                <td>Good</td>
+                <td>Manual setup</td>
+              </tr>
+              <tr>
+                <td>Learning Curve</td>
+                <td class="highlight">Medium</td>
+                <td>Low</td>
+                <td>Low</td>
+              </tr>
+              <tr>
+                <td>SaaS Features</td>
+                <td class="highlight">Built-in (guards, pipes, etc)</td>
+                <td>Build yourself</td>
+                <td>Build yourself</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">🏛️ Multi-Tenant Architecture</h2>
+          <div class="architecture-flow">
+            Frontend (Next.js) ↓ API Gateway / Load Balancer ↓ NestJS Backend
+            (with Tenant Context) ↓ ┌─────────────────┬─────────────────┐ │
+            PostgreSQL │ Redis │ │ (Row Level │ (Cache & │ │ Security) │
+            Sessions) │ └─────────────────┴─────────────────┘ ↓ Background Jobs
+            (Bull/BullMQ) ↓ External Services (SMS/Email/Storage)
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">✅ Why NestJS for SpeedLive</h2>
+          <div class="benefits">
+            <ul>
+              <li>
+                <strong>Enterprise-Ready:</strong> Built-in dependency
+                injection, perfect for complex multi-tenant services
+              </li>
+              <li>
+                <strong>Multi-Tenancy Support:</strong> Excellent patterns for
+                tenant isolation and context management
+              </li>
+              <li>
+                <strong>SaaS Features:</strong> Guards for auth, Pipes for
+                validation, Interceptors for logging
+              </li>
+              <li>
+                <strong>Microservices Ready:</strong> Easy to scale into
+                microservices as your platform grows
+              </li>
+              <li>
+                <strong>Developer Experience:</strong> Excellent TypeScript
+                support, testing tools, auto-generated docs
+              </li>
+              <li>
+                <strong>Team Productivity:</strong> Opinionated structure keeps
+                code consistent across developers
+              </li>
+              <li>
+                <strong>Ecosystem:</strong> Rich ecosystem with modules for
+                everything you need
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">📱 Key Integration Points</h2>
+          <div class="tech-grid">
+            <div class="tech-category">
+              <h3>Real-time Features</h3>
+              <ul class="tech-list">
+                <li>Socket.io for parcel tracking</li>
+                <li>Redis Pub/Sub for notifications</li>
+                <li>WebSocket connections per tenant</li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h3>Payment & Billing</h3>
+              <ul class="tech-list">
+                <li>Stripe/PayPal integration</li>
+                <li>Automated invoice generation</li>
+                <li>Multi-currency support</li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h3>Communication</h3>
+              <ul class="tech-list">
+                <li>SendGrid for emails</li>
+                <li>AWS SNS for SMS</li>
+                <li>Firebase for push notifications</li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h3>File Management</h3>
+              <ul class="tech-list">
+                <li>AWS S3 for documents</li>
+                <li>PDF generation (puppeteer)</li>
+                <li>Image optimization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">🚀 Deployment Strategy</h2>
+          <div class="architecture-flow">
+            Development: Docker + Docker Compose Local PostgreSQL + Redis
+            Staging/Production: Kubernetes (AWS EKS / Google GKE) OR Docker
+            Swarm / Docker Compose Database: AWS RDS PostgreSQL / Google Cloud
+            SQL AWS ElastiCache Redis Frontend: Vercel / Netlify (Next.js) OR
+            Docker container with Nginx
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>
+          SpeedLive Multi-Tenant SaaS Platform - Technology Stack
+          Recommendations
+        </p>
+        <p>Designed for scalability, security, and developer productivity</p>
+      </div>
+    </div>
+  </body>
+</html>
