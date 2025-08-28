@@ -393,36 +393,340 @@
         </div>
 
         <div class="section">
-          <h2 class="section-title">✅ Why NestJS for SpeedLive</h2>
-          <div class="benefits">
-            <ul>
+          <h2 class="section-title">🔍 Recommended Technologies and Why</h2>
+
+          <div class="tech-grid">
+            <div class="tech-category recommended">
+              <h3>🔧 Backend: NestJS</h3>
+              <div style="margin-bottom: 15px">
+                <strong>Why NestJS?</strong>
+              </div>
+              <ul class="tech-list">
+                <li>
+                  <strong>Multi-Tenant Architecture:</strong> Built-in
+                  decorators and guards for tenant isolation
+                </li>
+                <li>
+                  <strong>Enterprise Scalability:</strong> Dependency injection,
+                  modular architecture
+                </li>
+                <li>
+                  <strong>TypeScript First:</strong> Complete type safety across
+                  your shipping platform
+                </li>
+                <li>
+                  <strong>Built-in Validation:</strong> Class-validator for
+                  parcel, invoice data validation
+                </li>
+                <li>
+                  <strong>Auto-Generated Docs:</strong> Swagger integration for
+                  API documentation
+                </li>
+                <li>
+                  <strong>Testing Framework:</strong> Built-in testing utilities
+                  for complex business logic
+                </li>
+                <li>
+                  <strong>Microservices Ready:</strong> Easy transition as
+                  SpeedLive grows
+                </li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h3>⚡ Frontend: Next.js + React</h3>
+              <div style="margin-bottom: 15px">
+                <strong>Why Next.js?</strong>
+              </div>
+              <ul class="tech-list">
+                <li>
+                  <strong>SSR Performance:</strong> Fast loading for shipping
+                  dashboards
+                </li>
+                <li>
+                  <strong>Multi-Tenant Routing:</strong> Dynamic routes per
+                  client platform
+                </li>
+                <li>
+                  <strong>API Routes:</strong> Backend integration without CORS
+                  issues
+                </li>
+                <li>
+                  <strong>SEO Optimized:</strong> Better search visibility for
+                  client portals
+                </li>
+                <li>
+                  <strong>Image Optimization:</strong> Automatic optimization
+                  for parcel images
+                </li>
+                <li>
+                  <strong>TypeScript Support:</strong> End-to-end type safety
+                </li>
+                <li>
+                  <strong>Real-time Updates:</strong> Perfect for tracking
+                  interfaces
+                </li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h3>🗄️ Database: PostgreSQL</h3>
+              <div style="margin-bottom: 15px">
+                <strong>Why PostgreSQL?</strong>
+              </div>
+              <ul class="tech-list">
+                <li>
+                  <strong>Row Level Security:</strong> Perfect for multi-tenant
+                  data isolation
+                </li>
+                <li>
+                  <strong>JSONB Support:</strong> Flexible configuration per
+                  client platform
+                </li>
+                <li>
+                  <strong>ACID Compliance:</strong> Critical for
+                  financial/billing data integrity
+                </li>
+                <li>
+                  <strong>Full Text Search:</strong> Search parcels, invoices
+                  without external tools
+                </li>
+                <li>
+                  <strong>Geospatial Support:</strong> PostGIS for delivery zone
+                  mapping
+                </li>
+                <li>
+                  <strong>Performance:</strong> Excellent for complex shipping
+                  queries
+                </li>
+                <li>
+                  <strong>Scalability:</strong> Read replicas, partitioning for
+                  growth
+                </li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h3>⚡ Caching: Redis</h3>
+              <div style="margin-bottom: 15px">
+                <strong>Why Redis?</strong>
+              </div>
+              <ul class="tech-list">
+                <li>
+                  <strong>Real-time Tracking:</strong> Cache parcel status for
+                  instant updates
+                </li>
+                <li>
+                  <strong>Session Management:</strong> Multi-tenant user
+                  sessions
+                </li>
+                <li>
+                  <strong>Background Jobs:</strong> Queue for SMS/email
+                  notifications
+                </li>
+                <li>
+                  <strong>Rate Limiting:</strong> API protection per tenant
+                </li>
+                <li>
+                  <strong>Pub/Sub:</strong> Real-time notifications to delivery
+                  agents
+                </li>
+                <li>
+                  <strong>Performance:</strong> Sub-millisecond response times
+                </li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h3>🎨 UI Framework: Tailwind + shadcn/ui</h3>
+              <div style="margin-bottom: 15px">
+                <strong>Why This Combination?</strong>
+              </div>
+              <ul class="tech-list">
+                <li>
+                  <strong>Consistent Design:</strong> Uniform look across all
+                  tenant platforms
+                </li>
+                <li>
+                  <strong>Customizable Themes:</strong> Different branding per
+                  client
+                </li>
+                <li>
+                  <strong>Accessibility:</strong> Built-in WCAG compliance
+                </li>
+                <li>
+                  <strong>Mobile First:</strong> Perfect for delivery agent
+                  mobile apps
+                </li>
+                <li>
+                  <strong>Performance:</strong> Only used CSS gets included
+                </li>
+                <li>
+                  <strong>Developer Experience:</strong> Fast prototyping and
+                  iteration
+                </li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h3>📊 State Management: TanStack Query + Zustand</h3>
+              <div style="margin-bottom: 15px">
+                <strong>Why This Combination?</strong>
+              </div>
+              <ul class="tech-list">
+                <li>
+                  <strong>Server State:</strong> TanStack Query for API data
+                  caching
+                </li>
+                <li>
+                  <strong>Client State:</strong> Zustand for UI state management
+                </li>
+                <li>
+                  <strong>Real-time Sync:</strong> Automatic background
+                  refetching
+                </li>
+                <li>
+                  <strong>Optimistic Updates:</strong> Instant UI feedback for
+                  actions
+                </li>
+                <li>
+                  <strong>Offline Support:</strong> Works when delivery agents
+                  are offline
+                </li>
+                <li>
+                  <strong>Performance:</strong> Minimal re-renders, efficient
+                  updates
+                </li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h3>🔐 Authentication: Passport.js + JWT</h3>
+              <div style="margin-bottom: 15px">
+                <strong>Why Passport.js?</strong>
+              </div>
+              <ul class="tech-list">
+                <li>
+                  <strong>Multi-Strategy:</strong> Support multiple login
+                  methods per tenant
+                </li>
+                <li>
+                  <strong>Role-Based Access:</strong> Admin, Merchant, Delivery
+                  Agent roles
+                </li>
+                <li>
+                  <strong>Tenant Isolation:</strong> User authentication per
+                  platform
+                </li>
+                <li>
+                  <strong>Social Login:</strong> Google, Facebook integration if
+                  needed
+                </li>
+                <li>
+                  <strong>Security:</strong> Industry-standard authentication
+                  patterns
+                </li>
+                <li><strong>Scalability:</strong> Stateless JWT tokens</li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h3>☁️ Cloud: AWS/Google Cloud</h3>
+              <div style="margin-bottom: 15px">
+                <strong>Why Cloud Platform?</strong>
+              </div>
+              <ul class="tech-list">
+                <li>
+                  <strong>Auto-Scaling:</strong> Handle varying shipping volumes
+                </li>
+                <li><strong>Global CDN:</strong> Fast loading worldwide</li>
+                <li>
+                  <strong>Managed Services:</strong> RDS, ElastiCache, S3 for
+                  reliability
+                </li>
+                <li>
+                  <strong>Security:</strong> VPC, IAM, encryption at
+                  rest/transit
+                </li>
+                <li>
+                  <strong>Monitoring:</strong> CloudWatch, logging, alerting
+                </li>
+                <li>
+                  <strong>Cost Effective:</strong> Pay only for what you use
+                </li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h3>📱 Real-time: Socket.io</h3>
+              <div style="margin-bottom: 15px">
+                <strong>Why Socket.io?</strong>
+              </div>
+              <ul class="tech-list">
+                <li>
+                  <strong>Live Tracking:</strong> Real-time parcel status
+                  updates
+                </li>
+                <li>
+                  <strong>Agent Communication:</strong> Instant notifications to
+                  delivery agents
+                </li>
+                <li>
+                  <strong>Cross-Platform:</strong> Works on web, mobile, desktop
+                </li>
+                <li>
+                  <strong>Fallback Support:</strong> Works even without
+                  WebSocket support
+                </li>
+                <li>
+                  <strong>Room Management:</strong> Tenant-specific
+                  communication channels
+                </li>
+                <li>
+                  <strong>Reliable:</strong> Automatic reconnection, message
+                  queuing
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            style="
+              background: #e8f5e8;
+              border-radius: 8px;
+              padding: 20px;
+              margin: 20px 0;
+              border-left: 5px solid #27ae60;
+            "
+          >
+            <h3 style="color: #27ae60; margin-bottom: 15px">
+              🎯 Perfect Match for SpeedLive
+            </h3>
+            <p>
+              This technology stack is specifically chosen for multi-tenant SaaS
+              shipping platforms. Every technology addresses specific challenges
+              in shipping management:
+            </p>
+            <ul style="margin: 15px 0 0 20px">
               <li>
-                <strong>Enterprise-Ready:</strong> Built-in dependency
-                injection, perfect for complex multi-tenant services
+                <strong>Multi-tenancy:</strong> PostgreSQL RLS + NestJS guards
+                ensure complete tenant isolation
               </li>
               <li>
-                <strong>Multi-Tenancy Support:</strong> Excellent patterns for
-                tenant isolation and context management
+                <strong>Real-time tracking:</strong> Socket.io + Redis provide
+                instant updates for parcels
               </li>
               <li>
-                <strong>SaaS Features:</strong> Guards for auth, Pipes for
-                validation, Interceptors for logging
+                <strong>Scalability:</strong> Cloud-native architecture grows
+                with your business
               </li>
               <li>
-                <strong>Microservices Ready:</strong> Easy to scale into
-                microservices as your platform grows
+                <strong>Developer productivity:</strong> TypeScript end-to-end
+                reduces bugs
               </li>
               <li>
-                <strong>Developer Experience:</strong> Excellent TypeScript
-                support, testing tools, auto-generated docs
-              </li>
-              <li>
-                <strong>Team Productivity:</strong> Opinionated structure keeps
-                code consistent across developers
-              </li>
-              <li>
-                <strong>Ecosystem:</strong> Rich ecosystem with modules for
-                everything you need
+                <strong>Security:</strong> Enterprise-grade authentication and
+                data protection
               </li>
             </ul>
           </div>
